@@ -77,8 +77,6 @@ export default {
   mounted: function mounted() {
     this.initMask();
   },
-
-
   methods: {
     initMask: function initMask() {
       var _this = this;
@@ -253,7 +251,7 @@ export default {
       var isIE = /*@cc_on!@*/false || !!document.documentMode; //by http://stackoverflow.com/questions/9847580/how-to-detect-safari-chrome-ie-firefox-and-opera-browser
       /* eslint-enable */
       var isFirefox = typeof InstallTrigger !== 'undefined';
-      if (isIE || isFirefox && e.keyCode !== 9) {
+      if ((isIE || isFirefox) && e.keyCode !== 9) {
         e.preventDefault();
         e.data = e.key;
         this.textInput(e);
