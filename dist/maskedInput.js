@@ -25,7 +25,8 @@ export default {
         focusout: this.focusOut,
         cut: this.cut,
         copy: this.copy,
-        paste: this.paste
+        paste: this.paste,
+        click: this.focus
       }
     });
   },
@@ -150,6 +151,10 @@ export default {
     },
     getValue: function getValue() {
       return this.maskCore ? this.maskCore.getValue() : '';
+    },
+    focus: function focusOut() {
+      this.$refs.input.focus()
+      this.updateToCoreState();
     },
     keyDown: function keyDown(e) {
       // Always
