@@ -320,6 +320,10 @@ export default {
         this.$emit('input', '', '');
       }
     },
+    focus: function focusOut() {
+      this.$refs.input.focus();
+      this.updateToCoreState();
+    },
     setNativeSelection: function setNativeSelection() {
       this.maskCore.selection = {
         start: this.$refs.input.selectionStart,
