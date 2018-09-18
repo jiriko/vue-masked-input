@@ -122,6 +122,8 @@ export default {
     },
 
     keyDown(e) { // Always
+
+
       if (this.maskCore === null) {
         e.preventDefault();
         return;
