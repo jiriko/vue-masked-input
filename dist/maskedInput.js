@@ -267,6 +267,7 @@ export default {
     keyUp: function keyUp(e) {
       if (e.keyCode === 9) {
         // Preven change selection for Tab in
+        e.preventDefault()
         return;
       }
       this.updateToCoreState();
